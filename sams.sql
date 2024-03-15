@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.9.5deb2
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 22, 2018 at 12:25 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 5.6.24
+-- Host: localhost:3306
+-- Generation Time: Mar 15, 2024 at 08:56 AM
+-- Server version: 8.0.36-0ubuntu0.20.04.1
+-- PHP Version: 8.2.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sams`
+-- Database: `c`
 --
 
 -- --------------------------------------------------------
@@ -27,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `academic_year` (
-  `ac_year_id` int(2) NOT NULL,
+  `ac_year_id` int NOT NULL,
   `ac_year` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -45,10 +47,10 @@ INSERT INTO `academic_year` (`ac_year_id`, `ac_year`) VALUES
 --
 
 CREATE TABLE `attendance_mba_sem1` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -71,10 +73,10 @@ INSERT INTO `attendance_mba_sem1` (`att_id`, `date`, `s_enrl`, `usub_id`, `prese
 --
 
 CREATE TABLE `attendance_mba_sem2` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -85,10 +87,10 @@ CREATE TABLE `attendance_mba_sem2` (
 --
 
 CREATE TABLE `attendance_mba_sem3` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -99,10 +101,10 @@ CREATE TABLE `attendance_mba_sem3` (
 --
 
 CREATE TABLE `attendance_mba_sem4` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -113,10 +115,10 @@ CREATE TABLE `attendance_mba_sem4` (
 --
 
 CREATE TABLE `attendance_mba_sem5` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -127,10 +129,10 @@ CREATE TABLE `attendance_mba_sem5` (
 --
 
 CREATE TABLE `attendance_mba_sem6` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -141,10 +143,10 @@ CREATE TABLE `attendance_mba_sem6` (
 --
 
 CREATE TABLE `attendance_mba_sem7` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -155,10 +157,10 @@ CREATE TABLE `attendance_mba_sem7` (
 --
 
 CREATE TABLE `attendance_mba_sem8` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -169,10 +171,10 @@ CREATE TABLE `attendance_mba_sem8` (
 --
 
 CREATE TABLE `attendance_mba_sem9` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -183,10 +185,10 @@ CREATE TABLE `attendance_mba_sem9` (
 --
 
 CREATE TABLE `attendance_mba_sem10` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -197,10 +199,10 @@ CREATE TABLE `attendance_mba_sem10` (
 --
 
 CREATE TABLE `attendance_msc_sem1` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -509,10 +511,10 @@ INSERT INTO `attendance_msc_sem1` (`att_id`, `date`, `s_enrl`, `usub_id`, `prese
 --
 
 CREATE TABLE `attendance_msc_sem2` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -523,10 +525,10 @@ CREATE TABLE `attendance_msc_sem2` (
 --
 
 CREATE TABLE `attendance_msc_sem3` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -537,10 +539,10 @@ CREATE TABLE `attendance_msc_sem3` (
 --
 
 CREATE TABLE `attendance_msc_sem4` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -551,10 +553,10 @@ CREATE TABLE `attendance_msc_sem4` (
 --
 
 CREATE TABLE `attendance_msc_sem5` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -565,10 +567,10 @@ CREATE TABLE `attendance_msc_sem5` (
 --
 
 CREATE TABLE `attendance_msc_sem6` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -579,10 +581,10 @@ CREATE TABLE `attendance_msc_sem6` (
 --
 
 CREATE TABLE `attendance_msc_sem7` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -593,10 +595,10 @@ CREATE TABLE `attendance_msc_sem7` (
 --
 
 CREATE TABLE `attendance_msc_sem8` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -607,10 +609,10 @@ CREATE TABLE `attendance_msc_sem8` (
 --
 
 CREATE TABLE `attendance_msc_sem9` (
-  `att_id` int(11) NOT NULL,
+  `att_id` int NOT NULL,
   `date` date NOT NULL,
-  `s_enrl` int(7) NOT NULL,
-  `usub_id` int(4) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `usub_id` int NOT NULL,
   `present` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -621,7 +623,7 @@ CREATE TABLE `attendance_msc_sem9` (
 --
 
 CREATE TABLE `course` (
-  `c_id` int(2) NOT NULL,
+  `c_id` int NOT NULL,
   `cname` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -644,7 +646,7 @@ CREATE TABLE `days` (
   `date` date NOT NULL,
   `holiday` tinyint(1) NOT NULL,
   `day` varchar(3) NOT NULL,
-  `ac_year_id` int(11) NOT NULL
+  `ac_year_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1025,14 +1027,14 @@ INSERT INTO `days` (`date`, `holiday`, `day`, `ac_year_id`) VALUES
 --
 
 CREATE TABLE `faculty` (
-  `ufac_id` int(2) NOT NULL,
+  `ufac_id` int NOT NULL,
   `fac_id` varchar(4) NOT NULL,
   `fac_name` varchar(70) NOT NULL,
-  `c_id` int(2) NOT NULL,
+  `c_id` int NOT NULL,
   `email` varchar(100) NOT NULL,
-  `contact` int(10) NOT NULL,
+  `contact` int NOT NULL,
   `password` varchar(20) NOT NULL,
-  `role` int(2) NOT NULL
+  `role` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1040,56 +1042,56 @@ CREATE TABLE `faculty` (
 --
 
 INSERT INTO `faculty` (`ufac_id`, `fac_id`, `fac_name`, `c_id`, `email`, `contact`, `password`, `role`) VALUES
-(1, 'CR', 'Chintal raval', 0, 'chandni@gmail.com', 0, 'chandnisoni', 2),
-(2, 'HP', 'Hitesh Parmar', 0, 'hiteshparmarHP@gmail.com', 0, 'hiteshparmarHP', 2),
-(3, 'PG', 'Pooja Gandhi', 0, 'poojagandhiPG@gmail.com', 0, 'poojagandhiPG', 2),
-(4, 'PJ', 'Pooja Jain', 0, 'poojajainPJ@gmail.com', 0, 'poojajainPJ', 2),
-(6, 'JP', 'Dr. Jayraj Pandya', 2, 'chandnisoni@gmail.com', 0, 'chandnisoni', 1),
-(7, 'MD', 'Dr. Maulik Desai', 1, 'maulikdesaiMD@gmail.com', 0, 'maulikdesaiMD', 2),
-(8, 'IB', 'Dr. Ismail Bootwala', 1, 'ismailbootwalaIb@gmail.com', 0, 'ismailbootwalaIb', 2),
-(9, 'MU', 'Milan Undavia', 1, 'milanundaviaMU@gmail.com', 0, 'milanundaviaMU', 2),
-(10, 'PK', 'Pooja Khatri', 2, 'poojakhatriPK@gmail.com', 0, 'poojakhatriPK', 2),
-(11, 'AP', 'Akanksha Patel', 2, 'akanshapatelAP@gmail.com', 0, 'akanshapatelAP', 2),
-(12, 'KC', 'Kinjal Choksi', 1, 'kinjalchoksiKC@gmail.com', 0, 'kinjalchoksiKC', 2),
-(13, 'UB', 'Uday Bhatt', 2, 'udaybhattUB@gmail.com', 0, 'udaybhattUB', 2),
-(14, 'AYB', 'Amrita Y. Bardiya', 1, 'amritaybardiyaAYB@gmail.com', 0, 'amritaybardiyaAYB', 2),
-(15, 'RR', 'Dr. R. Radha', 2, 'rradhaRR@gmail.com', 0, 'rradhaRR', 1),
-(16, 'AG', 'Dr. Anjali Gokhru', 1, 'anjaligokhruAG@gmail.com', 0, 'anjaligokhruAG', 2),
-(17, 'IJ', 'Ingita Jain', 1, 'ingitajainIJ@gmail.com', 0, 'ingitajainIJ', 2),
-(18, 'RG', 'Dr. Rachna Gandhi', 1, 'rachnagandhiRG@gmail.com', 0, 'rachnagandhiRG', 2),
-(19, 'SF', 'Suman Fulwani', 1, 'sumanfulwaniSF@gmail.com', 0, 'sumanfulwaniSF', 2),
-(20, 'VS', 'Vishva Shah', 1, 'vishvashahVS@gmail.com', 0, 'vishvashahVS', 2),
-(21, 'VN', 'Vishali Nindroda', 2, 'vaishalinindrodaVN@gmail.com', 0, 'vaishalinindrodaVN', 2),
-(22, 'AA', 'Anita Ahuja', 1, 'anitaahujaAA@gmail.com', 0, 'anitaahujaAA', 2),
-(23, 'PM', 'Priyanka Mehta', 1, 'priyankamehtaPM@gmail.com', 0, 'priyankamehtaPM', 2),
-(24, 'SA', 'DR. Shamina Ansari', 1, 'shaminaansariSA@gmail.com', 0, 'shaminaansariSA', 2),
-(25, 'RS', 'Richa Seth', 1, 'richasethRS@gmail.com', 0, 'richasethRS', 2),
-(26, 'HP', 'Dr. Hiral Parikh', 1, 'hiralparikhHP@gmail.com', 0, 'hiralparikhHP', 2),
-(27, 'AMG', 'Akanxa M. Galande', 1, 'akanxamhgalandeAMG@gmail.com', 0, 'akanxamhgalandeAMG', 2),
-(28, 'IS', 'Ishita Sakariya', 1, 'ishitasakariyaIS@gmail.com', 0, 'ishitasakariyaIS', 2),
-(29, 'AV', 'Ankita Vaidya', 1, 'ankitavaidyaAV@gmail.com', 0, 'ankitavaidyaAV', 2),
-(30, 'AB', 'Asha Brahmkshatriya', 2, 'ashabrahmkshatriyaAB@gmail.com', 0, 'ashabrahmkshatriyaAB', 2),
-(31, 'NC', 'Nirul Chaudhary', 1, 'nirulchaudharyNC@gmail.com', 0, 'nirulchaudharyNC', 2),
-(32, 'NG', 'Dr. Neelkamal Gogna', 1, 'neelkamalgognaNG@gmail.com', 0, 'neelkamalgognaNG', 2),
-(33, 'KP', 'Kalyani Patel', 0, 'kalyanipatelKP@gmail.com', 0, 'kalyanipatelKP', 2),
-(34, 'NG', 'Nandita Goswami', 2, 'nanditagoswamiNG@gmail.com', 0, 'nanditagoswamiNG', 2),
-(35, 'SC', 'Sonali Chakraborty', 0, 'sonalichokrabortySC@gmail.com', 0, 'sonalichokrabortySC', 2),
-(36, 'SS', 'Shailee Shah', 0, 'shaileeshahSS@gmail.com', 0, 'shaileeshahSS', 2),
-(37, 'PD', 'Palak Dabhi', 0, 'palakdabhiPD@gmail.com', 0, 'palakdabhiPD', 2),
-(38, 'VS', 'Vidhi Sutariya', 0, 'vidhisutariyaVS@gmail.com', 0, 'vidhisutariyaVS', 2),
-(39, 'DB', 'Dipti Bhatt', 0, 'diptibhattDB@gmail.com', 0, 'diptibhattDB', 2),
-(40, 'PA', 'Priyanka Arorra', 0, 'priyankaarorraPA@gmail.com', 0, 'priyankaarorraPA', 2),
-(41, 'RS', 'Rujuta shah', 0, 'rujutashahRS@gmail.com', 0, 'rujutashahRS', 2),
-(42, 'JP', 'Jaimini Patel', 0, 'jaiminipatelJP@gmail.com', 0, 'jaiminipatelJP', 2),
-(43, 'ND', 'Namita Doshi', 0, 'namitadoshiND@gmail.com', 0, 'namitadoshiND', 2),
-(44, 'AK', 'Amit Kalyani', 0, 'amitkalyaniAK@gmail.com', 0, 'amitkalyaniAK', 2),
-(45, 'JR', 'Jigar Raval', 0, 'jigarravalJR@gmail.com', 0, 'jigarravalJR', 2),
-(46, 'EK', 'Ekta Kikiani', 0, 'ektakikianiEK@gmail.com', 0, 'ektakikianiEK', 2),
-(47, 'AG', 'Aishwari Goswami', 0, 'aishwarigoswamiAG@gmail.com', 0, 'aishwarigoswamiAG', 2),
-(49, 'CK', 'CK', 1, 'ck@gmail.com', 0, 'ck', 2),
-(50, 'jh', 'mn ', 1, 'bhb', 0, ',m,m, ', 2),
-(51, 'dfv', 'j', 1, 'asx', 0, 'jay', 2),
-(52, 'gv', 'jhb', 1, 'jn', 0, 'jjjjj', 2);
+(1, 'CR', 'Chintal raval', 0, 'chandni@gmail.com', 1234567890, 'chandnisoni', 2),
+(2, 'HP', 'Hitesh Parmar', 0, 'hiteshparmarHP@gmail.com', 1234567890, 'hiteshparmarHP', 2),
+(3, 'PG', 'Pooja Gandhi', 0, 'poojagandhiPG@gmail.com', 1234567890, 'poojagandhiPG', 2),
+(4, 'PJ', 'Pooja Jain', 0, 'poojajainPJ@gmail.com', 1234567890, 'poojajainPJ', 2),
+(6, 'JP', 'Dr. Jayraj Pandya', 2, 'chandnisoni@gmail.com', 1234567890, 'chandnisoni', 1),
+(7, 'MD', 'Dr. Maulik Desai', 1, 'maulikdesaiMD@gmail.com', 1234567890, 'maulikdesaiMD', 2),
+(8, 'IB', 'Dr. Ismail Bootwala', 1, 'ismailbootwalaIb@gmail.com', 1234567890, 'ismailbootwalaIb', 2),
+(9, 'MU', 'Milan Undavia', 1, 'milanundaviaMU@gmail.com', 1234567890, 'milanundaviaMU', 2),
+(10, 'PK', 'Pooja Khatri', 2, 'poojakhatriPK@gmail.com', 1234567890, 'poojakhatriPK', 2),
+(11, 'AP', 'Akanksha Patel', 2, 'akanshapatelAP@gmail.com', 1234567890, 'akanshapatelAP', 2),
+(12, 'KC', 'Kinjal Choksi', 1, 'kinjalchoksiKC@gmail.com', 1234567890, 'kinjalchoksiKC', 2),
+(13, 'UB', 'Uday Bhatt', 2, 'udaybhattUB@gmail.com', 1234567890, 'udaybhattUB', 2),
+(14, 'AYB', 'Amrita Y. Bardiya', 1, 'amritaybardiyaAYB@gmail.com', 1234567890, 'amritaybardiyaAYB', 2),
+(15, 'RR', 'Dr. R. Radha', 2, 'rradhaRR@gmail.com', 1234567890, 'rradhaRR', 1),
+(16, 'AG', 'Dr. Anjali Gokhru', 1, 'anjaligokhruAG@gmail.com', 1234567890, 'anjaligokhruAG', 2),
+(17, 'IJ', 'Ingita Jain', 1, 'ingitajainIJ@gmail.com', 1234567890, 'ingitajainIJ', 2),
+(18, 'RG', 'Dr. Rachna Gandhi', 1, 'rachnagandhiRG@gmail.com', 1234567890, 'rachnagandhiRG', 2),
+(19, 'SF', 'Suman Fulwani', 1, 'sumanfulwaniSF@gmail.com', 1234567890, 'sumanfulwaniSF', 2),
+(20, 'VS', 'Vishva Shah', 1, 'vishvashahVS@gmail.com', 1234567890, 'vishvashahVS', 2),
+(21, 'VN', 'Vishali Nindroda', 2, 'vaishalinindrodaVN@gmail.com', 1234567890, 'vaishalinindrodaVN', 2),
+(22, 'AA', 'Anita Ahuja', 1, 'anitaahujaAA@gmail.com', 1234567890, 'anitaahujaAA', 2),
+(23, 'PM', 'Priyanka Mehta', 1, 'priyankamehtaPM@gmail.com', 1234567890, 'priyankamehtaPM', 2),
+(24, 'SA', 'DR. Shamina Ansari', 1, 'shaminaansariSA@gmail.com', 1234567890, 'shaminaansariSA', 2),
+(25, 'RS', 'Richa Seth', 1, 'richasethRS@gmail.com', 1234567890, 'richasethRS', 2),
+(26, 'HP', 'Dr. Hiral Parikh', 1, 'hiralparikhHP@gmail.com', 1234567890, 'hiralparikhHP', 2),
+(27, 'AMG', 'Akanxa M. Galande', 1, 'akanxamhgalandeAMG@gmail.com', 1234567890, 'akanxamhgalandeAMG', 2),
+(28, 'IS', 'Ishita Sakariya', 1, 'ishitasakariyaIS@gmail.com', 1234567890, 'ishitasakariyaIS', 2),
+(29, 'AV', 'Ankita Vaidya', 1, 'ankitavaidyaAV@gmail.com', 1234567890, 'ankitavaidyaAV', 2),
+(30, 'AB', 'Asha Brahmkshatriya', 2, 'ashabrahmkshatriyaAB@gmail.com', 1234567890, 'ashabrahmkshatriyaAB', 2),
+(31, 'NC', 'Nirul Chaudhary', 1, 'nirulchaudharyNC@gmail.com', 1234567890, 'nirulchaudharyNC', 2),
+(32, 'NG', 'Dr. Neelkamal Gogna', 1, 'neelkamalgognaNG@gmail.com', 1234567890, 'neelkamalgognaNG', 2),
+(33, 'KP', 'Kalyani Patel', 0, 'kalyanipatelKP@gmail.com', 1234567890, 'kalyanipatelKP', 2),
+(34, 'NG', 'Nandita Goswami', 2, 'nanditagoswamiNG@gmail.com', 1234567890, 'nanditagoswamiNG', 2),
+(35, 'SC', 'Sonali Chakraborty', 0, 'sonalichokrabortySC@gmail.com', 1234567890, 'sonalichokrabortySC', 2),
+(36, 'SS', 'Shailee Shah', 0, 'shaileeshahSS@gmail.com', 1234567890, 'shaileeshahSS', 2),
+(37, 'PD', 'Palak Dabhi', 0, 'palakdabhiPD@gmail.com', 1234567890, 'palakdabhiPD', 2),
+(38, 'VS', 'Vidhi Sutariya', 0, 'vidhisutariyaVS@gmail.com', 1234567890, 'vidhisutariyaVS', 2),
+(39, 'DB', 'Dipti Bhatt', 0, 'diptibhattDB@gmail.com', 1234567890, 'diptibhattDB', 2),
+(40, 'PA', 'Priyanka Arorra', 0, 'priyankaarorraPA@gmail.com', 1234567890, 'priyankaarorraPA', 2),
+(41, 'RS', 'Rujuta shah', 0, 'rujutashahRS@gmail.com', 1234567890, 'rujutashahRS', 2),
+(42, 'JP', 'Jaimini Patel', 0, 'jaiminipatelJP@gmail.com', 1234567890, 'jaiminipatelJP', 2),
+(43, 'ND', 'Namita Doshi', 0, 'namitadoshiND@gmail.com', 1234567890, 'namitadoshiND', 2),
+(44, 'AK', 'Amit Kalyani', 0, 'amitkalyaniAK@gmail.com', 1234567890, 'amitkalyaniAK', 2),
+(45, 'JR', 'Jigar Raval', 0, 'jigarravalJR@gmail.com', 1234567890, 'jigarravalJR', 2),
+(46, 'EK', 'Ekta Kikiani', 0, 'ektakikianiEK@gmail.com', 1234567890, 'ektakikianiEK', 2),
+(47, 'AG', 'Aishwari Goswami', 0, 'aishwarigoswamiAG@gmail.com', 1234567890, 'aishwarigoswamiAG', 2),
+(49, 'CK', 'CK', 1, 'ck@gmail.com', 1234567890, 'ck', 2),
+(50, 'jh', 'mn ', 1, 'bhb', 1234567890, ',m,m, ', 2),
+(51, 'dfv', 'j', 1, 'asx', 1234567890, 'jay', 2),
+(52, 'gv', 'jhb', 1, 'jn', 1234567890, 'jjjjj', 2);
 
 -- --------------------------------------------------------
 
@@ -1122,7 +1124,7 @@ INSERT INTO `schedule_msc_sem1_diva` (`day`, `12:15 to 1:10`, `1:10 to 2:05`, `2
 --
 
 CREATE TABLE `sem_year` (
-  `sem_no` int(2) NOT NULL,
+  `sem_no` int NOT NULL,
   `year` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1149,17 +1151,17 @@ INSERT INTO `sem_year` (`sem_no`, `year`) VALUES
 --
 
 CREATE TABLE `student` (
-  `s_enrl` int(11) NOT NULL,
-  `s_rn` int(7) NOT NULL,
+  `s_enrl` int NOT NULL,
+  `s_rn` int NOT NULL,
   `fnm` varchar(50) NOT NULL,
   `lnm` char(50) NOT NULL,
   `s_gen` tinyint(1) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `contact` bigint(10) NOT NULL,
-  `c_id` int(2) NOT NULL,
-  `sem` int(2) NOT NULL,
+  `contact` bigint NOT NULL,
+  `c_id` int NOT NULL,
+  `sem` int NOT NULL,
   `division` varchar(2) NOT NULL,
-  `usub_id` int(4) DEFAULT NULL
+  `usub_id` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1167,102 +1169,102 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`s_enrl`, `s_rn`, `fnm`, `lnm`, `s_gen`, `email`, `contact`, `c_id`, `sem`, `division`, `usub_id`) VALUES
-(1, 2161173, 'AYUSHI RAJESH PATEL', '', 1, '', 0, 0, 1, 'a', NULL),
-(2, 2161174, 'BHARVAD VIKRAM NATHUBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(3, 2161175, 'BHAVSAR JAINAXI RAJESH', '', 1, '', 0, 0, 1, 'a', NULL),
-(4, 2161176, 'BRAHMBHATT VISHAL RAMCHANDRA', '', 0, '', 0, 0, 1, 'a', NULL),
-(5, 2161177, 'CHAUDHARY PRIYANKA RAHULKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(6, 2161178, 'CHAVDA JAYRAJSINH VIJAYSINH', '', 0, '', 0, 0, 1, 'a', NULL),
-(7, 2161179, 'CHAWDA YUVRAJ KIRIT KUMAR', '', 0, '', 0, 0, 1, 'a', NULL),
-(8, 2161180, 'CHUNARA KINJAL MANISH KUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(9, 2161181, 'DALWADI PRIYANSHI VINAYKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(10, 2161182, 'DARJI SHIVANI LALJIBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(11, 2161183, 'DHANDHUKIYA NIDHI ALPESHKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(12, 2161184, 'DUDHIA JUHI NIKUNJKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(13, 2161185, 'GAJJAR PRIYANKABEN MAHESHBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(14, 2161186, 'GOHIL HARDIK SHAMJIBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(15, 2161187, 'GORANIA KARAN RAMDEVBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(16, 2161188, 'JAIN ANSHI AMRIT', '', 1, '', 0, 0, 1, 'a', NULL),
-(17, 2161189, 'JAYSWAL BHAVIKA PRAKASHKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(18, 2161190, 'JOGANI RIMABAHEN RAJENDRAKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(19, 2161191, 'JOSHI SACHIN KUMARBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(20, 2161192, 'KARLIKER YUG SHAILESHBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(21, 2161193, 'KUTANA PAYALBEN SAVJIBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(22, 2161194, 'MACWAN ARPITA ALBERT', '', 1, '', 0, 0, 1, 'a', NULL),
-(23, 2161195, 'MAKWANA PRAKASHKUMAR DHANJIBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(24, 2161196, 'MARU SHUBHAM RASHIKBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(25, 2161197, 'MEMON TASLIMBANU IQBALBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(26, 2161198, 'MISTRY BRIJESH MANSUKHBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(27, 2161199, 'MODI BINAL PRAKASHBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(28, 2161200, 'NAGAR REMILA PARASMAL', '', 1, '', 0, 0, 1, 'a', NULL),
-(29, 2161201, 'NAYAK JAY KANDARPKUMAR', '', 0, '', 0, 0, 1, 'a', NULL),
-(30, 2161202, 'PADIA DARSHIL PRASHANTBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(31, 2161203, 'PANCHAL ANJALIBEN MAHENDRAKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(32, 2161204, 'PANCHAL KANISHKA JAYESHBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(33, 2161205, 'PANCHAL SHRUTI HEMENDRAKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(34, 2161206, 'PANCHAL VISMAY MAYANKKUMAR', '', 0, '', 0, 0, 1, 'a', NULL),
-(35, 2161207, 'PAREKH JAIMINI PREMALKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(36, 2161208, 'PARMAR AYUSHI MANHARBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(37, 2161209, 'PARMAR RAJAT MANOJBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(38, 2161210, 'PATADIYA BIJAL NARENDRABHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(39, 2161211, 'PATEL AYUSHI PIYUSHKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(40, 2161212, 'PATEL HENIL DIPAKKUMAR', '', 0, '', 0, 0, 1, 'a', NULL),
-(41, 2161213, 'PATEL MARGIBEN DILIPBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(42, 2161214, 'PATEL NEELKUMAR ASHOKBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(43, 2161215, 'PATEL PINKY ASHOKKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(44, 2161216, 'PATEL RAJ KALPESHBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(45, 2161217, 'PATEL SHREY ASHWINKUMAR', '', 0, '', 0, 0, 1, 'a', NULL),
-(46, 2161218, 'PATEL SHRUTI SHAILESHBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(47, 2161219, 'PATEL ZINALBEN MAHENDRAKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(48, 2161220, 'PRAJAPATI AMISHA RAJUBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(49, 2161221, 'PRAJAPATI DARSHANKUMAR BALDEVBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(50, 2161222, 'PRAJAPATI JAY AMBALAL', '', 0, '', 0, 0, 1, 'a', NULL),
-(51, 2161223, 'PRAJAPATI PRITI VITTHALBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(52, 2161224, 'PRAJAPATI SHIVANGI PARESHBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(53, 2161225, 'PUJARA ROSHNI HARISHBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(54, 2161226, 'RANGWALA FATEMA MUSTAQBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(55, 2161227, 'RATHOD SRUSHTI DINESHBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(56, 2161228, 'RINGWALA JANKI YOGESHBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(57, 2161229, 'SANGHAVI PRACHI YOGESHBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(58, 2161230, 'SARVAIYA URVASHEE DIPAKBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(59, 2161231, 'SHAH AKSHAT PARESHBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(60, 2161232, 'SHAH GREHA NILESH', '', 1, '', 0, 0, 1, 'a', NULL),
-(61, 2161233, 'SHAH JANVI HETALBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(62, 2161234, 'SHAH KAVISH PRAFULBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(63, 2161235, 'SHAH KRISHA ALPESH', '', 1, '', 0, 0, 1, 'a', NULL),
-(64, 2161236, 'SHAH MEET JITENDRAKUMAR', '', 0, '', 0, 0, 1, 'a', NULL),
-(65, 2161237, 'SHAH POOJAN SHRENIKKUMAR', '', 0, '', 0, 0, 1, 'a', NULL),
-(66, 2161238, 'SHAH PRESHA DARSHANKUMAR', '', 0, '', 0, 0, 1, 'a', NULL),
-(67, 2161239, 'SHAH PURVANG BHADRESHKUMAR', '', 0, '', 0, 0, 1, 'a', NULL),
-(68, 2161240, 'SHAH SHIKHA KAUSHAL', '', 1, '', 0, 0, 1, 'a', NULL),
-(69, 2161241, 'SHAH VARSHIL FALGUNBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(70, 2161242, 'SHAIKH AAMENABANU KAMRUDDIN', '', 1, '', 0, 0, 1, 'a', NULL),
-(71, 2161243, 'SHUKLA KAVISHA SANKETBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(72, 2161244, 'SOLANKI FENIL HITESHKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(73, 2161245, 'SOLANKI MILIND MUKESHBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(74, 2161246, 'SOLANKI RENUKABEN AMARSING', '', 1, '', 0, 0, 1, 'a', NULL),
-(75, 2161247, 'SONI DARSHITA DILIPBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(76, 2161248, 'SONI RAJ MAHENDRABHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(77, 2161249, 'SUTHAR DHRUVKUMAR ARVINDBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(78, 2161250, 'TAKOLIYA MIHIR DHARMENDRAKUMAR', '', 0, '', 0, 0, 1, 'a', NULL),
-(79, 2151251, 'SHAIKH MO AMMAR NAIMULHAQ', '', 0, '', 0, 0, 1, 'a', NULL),
-(80, 2151252, 'PAREKH RAVI VIJAYKUMAR', '', 0, '', 0, 0, 1, 'a', NULL),
-(81, 2151253, 'PANCHAL TIRTH RAJUBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(82, 2151254, 'SHRIMALI DHAVAL ASHOKBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(83, 2151255, 'CHAUHAN NITIN MAHENDRABHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(84, 2151256, 'DARJI RAJAN ASHOKBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(85, 2151257, 'KORA VISHAL LAXMINARAYAN', '', 0, '', 0, 0, 1, 'a', NULL),
-(86, 2151258, 'RAMI KINALBEN VINODBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(87, 2151259, 'VALA TEJAL ARUNBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(88, 2151260, 'PRAJAPATI DISHA RAJIVKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(89, 2151261, 'LEUVA NISHA PARESHKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(90, 2151262, 'NAYAK BHUMIKABEN BHUPENDRAKUMAR', '', 1, '', 0, 0, 1, 'a', NULL),
-(91, 2151263, 'BHARADAVA JANAKI PARESHBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(92, 2151264, 'PRAJAPATI MANTHAN GANESHBHAI', '', 0, '', 0, 0, 1, 'a', NULL),
-(93, 2151265, 'PATEL RUTU ASHWINKUMAR', '', 0, '', 0, 0, 1, 'a', NULL),
-(94, 2151266, 'MAKVANA AARTIBEN JILAJI', '', 0, '', 0, 0, 1, 'a', NULL),
-(95, 2151267, 'CHAUHAN RUCHITA CHHAGANBHAI', '', 1, '', 0, 0, 1, 'a', NULL),
-(96, 2151268, 'KAYASTH HEMALI SHAILESHKUMAR', '', 1, '', 0, 0, 1, 'a', NULL);
+(1, 2161173, 'AYUSHI PATEL', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(2, 2161174, 'BHARVAD NATHUBHAI', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(3, 2161175, 'BHAVSAR RAJESH', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(4, 2161176, 'BRAHMBHATT RAMCHANDRA', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(5, 2161177, 'CHAUDHARY RAHULKUMAR', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(6, 2161178, 'CHAVDA VIJAYSINH', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(7, 2161179, 'CHAWDA KIRIT KUMAR', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(8, 2161180, 'CHUNARA MANISH KUMAR', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(9, 2161181, 'DALWADI VINAYKUMAR', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(10, 2161182, 'DARJI LALJIBHAI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(11, 2161183, 'DHANDHUKIYA NIDHI ', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(12, 2161184, 'DUDHIA JUHI ', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(13, 2161185, 'GAJJAR PRIYANKABEN ', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(14, 2161186, 'GOHIL HARDIK ', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(15, 2161187, 'GORANIA KARAN', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(16, 2161188, 'JAIN ANSHI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(17, 2161189, 'JAYSWAL BHAVIKA', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(18, 2161190, 'JOGANI RIMABAHEN', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(19, 2161191, 'JOSHI SACHIN', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(20, 2161192, 'KARLIKER YUG', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(21, 2161193, 'KUTANA PAYALBEN', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(22, 2161194, 'MACWAN ARPITA ', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(23, 2161195, 'MAKWANA PRAKASHKUMAR ', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(24, 2161196, 'MARU SHUBHAM ', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(25, 2161197, 'MEMON TASLIMBANU ', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(26, 2161198, 'MISTRY BRIJESH ', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(27, 2161199, 'MODI BINAL ', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(28, 2161200, 'NAGAR REMILA', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(29, 2161201, 'NAYAK JAY', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(30, 2161202, 'PADIA DARSHIL', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(31, 2161203, 'PANCHAL ANJALIBEN', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(32, 2161204, 'PANCHAL KANISHKA', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(33, 2161205, 'PANCHAL SHRUTI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(34, 2161206, 'PANCHAL VISMAY', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(35, 2161207, 'PAREKH JAIMINI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(36, 2161208, 'PARMAR AYUSHI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(37, 2161209, 'PARMAR RAJAT', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(38, 2161210, 'PATADIYA BIJAL', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(39, 2161211, 'PATEL AYUSHI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(40, 2161212, 'PATEL HENIL', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(41, 2161213, 'PATEL MARGIBEN', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(42, 2161214, 'PATEL NEELKUMAR', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(43, 2161215, 'PATEL PINKY', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(44, 2161216, 'PATEL RAJ', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(45, 2161217, 'PATEL SHREY', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(46, 2161218, 'PATEL SHRUTI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(47, 2161219, 'PATEL ZINALBEN', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(48, 2161220, 'PRAJAPATI AMISHA', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(49, 2161221, 'PRAJAPATI DARSHANKUMAR', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(50, 2161222, 'PRAJAPATI JAY', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(51, 2161223, 'PRAJAPATI PRITI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(52, 2161224, 'PRAJAPATI SHIVANGI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(53, 2161225, 'PUJARA ROSHNI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(54, 2161226, 'RANGWALA FATEMA', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(55, 2161227, 'RATHOD SRUSHTI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(56, 2161228, 'RINGWALA JANKI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(57, 2161229, 'SANGHAVI PRACHI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(58, 2161230, 'SARVAIYA URVASHEE', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(59, 2161231, 'SHAH AKSHAT', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(60, 2161232, 'SHAH GREHA', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(61, 2161233, 'SHAH JANVI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(62, 2161234, 'SHAH KAVISH', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(63, 2161235, 'SHAH KRISHA', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(64, 2161236, 'SHAH MEET', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(65, 2161237, 'SHAH POOJAN', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(66, 2161238, 'SHAH PRESHA', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(67, 2161239, 'SHAH PURVANG', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(68, 2161240, 'SHAH SHIKHA', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(69, 2161241, 'SHAH VARSHIL', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(70, 2161242, 'SHAIKH AAMENABANU', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(71, 2161243, 'SHUKLA KAVISHA', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(72, 2161244, 'SOLANKI FENIL', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(73, 2161245, 'SOLANKI MILIND', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(74, 2161246, 'SOLANKI RENUKABEN', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(75, 2161247, 'SONI DARSHITA', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(76, 2161248, 'SONI RAJ', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(77, 2161249, 'SUTHAR DHRUVKUMAR', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(78, 2161250, 'TAKOLIYA MIHIR', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(79, 2151251, 'SHAIKH MO AMMAR', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(80, 2151252, 'PAREKH RAVI', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(81, 2151253, 'PANCHAL TIRTH', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(82, 2151254, 'SHRIMALI DHAVAL', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(83, 2151255, 'CHAUHAN NITIN', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(84, 2151256, 'DARJI RAJAN', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(85, 2151257, 'KORA VISHAL', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(86, 2151258, 'RAMI KINALBEN', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(87, 2151259, 'VALA TEJAL', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(88, 2151260, 'PRAJAPATI DISHA', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(89, 2151261, 'LEUVA NISHA', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(90, 2151262, 'NAYAK BHUMIKABEN', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(91, 2151263, 'BHARADAVA JANAKI', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(92, 2151264, 'PRAJAPATI MANTHAN', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(93, 2151265, 'PATEL RUTU', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(94, 2151266, 'MAKVANA AARTIBEN', '', 0, '', 9876543210, 0, 1, 'a', NULL),
+(95, 2151267, 'CHAUHAN RUCHITA', '', 1, '', 9876543210, 0, 1, 'a', NULL),
+(96, 2151268, 'KAYASTH HEMALI', '', 1, '', 9876543210, 0, 1, 'a', NULL);
 
 -- --------------------------------------------------------
 
@@ -1271,14 +1273,14 @@ INSERT INTO `student` (`s_enrl`, `s_rn`, `fnm`, `lnm`, `s_gen`, `email`, `contac
 --
 
 CREATE TABLE `subject` (
-  `usub_id` int(4) NOT NULL,
+  `usub_id` int NOT NULL,
   `sub_id` varchar(25) NOT NULL,
   `sub_name` varchar(100) NOT NULL,
   `special` varchar(10) NOT NULL,
   `sub_type` tinyint(1) NOT NULL,
-  `sem_no` int(2) NOT NULL,
-  `c_id` int(2) NOT NULL,
-  `ufac_id` int(2) NOT NULL
+  `sem_no` int NOT NULL,
+  `c_id` int NOT NULL,
+  `ufac_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1705,123 +1707,137 @@ ALTER TABLE `subject`
 -- AUTO_INCREMENT for table `academic_year`
 --
 ALTER TABLE `academic_year`
-  MODIFY `ac_year_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `ac_year_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
 --
 -- AUTO_INCREMENT for table `attendance_mba_sem1`
 --
 ALTER TABLE `attendance_mba_sem1`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `attendance_mba_sem2`
 --
 ALTER TABLE `attendance_mba_sem2`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_mba_sem3`
 --
 ALTER TABLE `attendance_mba_sem3`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_mba_sem4`
 --
 ALTER TABLE `attendance_mba_sem4`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_mba_sem5`
 --
 ALTER TABLE `attendance_mba_sem5`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_mba_sem6`
 --
 ALTER TABLE `attendance_mba_sem6`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_mba_sem7`
 --
 ALTER TABLE `attendance_mba_sem7`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_mba_sem8`
 --
 ALTER TABLE `attendance_mba_sem8`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_mba_sem9`
 --
 ALTER TABLE `attendance_mba_sem9`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_mba_sem10`
 --
 ALTER TABLE `attendance_mba_sem10`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_msc_sem1`
 --
 ALTER TABLE `attendance_msc_sem1`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=303;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=303;
+
 --
 -- AUTO_INCREMENT for table `attendance_msc_sem2`
 --
 ALTER TABLE `attendance_msc_sem2`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_msc_sem3`
 --
 ALTER TABLE `attendance_msc_sem3`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_msc_sem4`
 --
 ALTER TABLE `attendance_msc_sem4`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_msc_sem5`
 --
 ALTER TABLE `attendance_msc_sem5`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_msc_sem6`
 --
 ALTER TABLE `attendance_msc_sem6`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_msc_sem7`
 --
 ALTER TABLE `attendance_msc_sem7`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_msc_sem8`
 --
 ALTER TABLE `attendance_msc_sem8`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `attendance_msc_sem9`
 --
 ALTER TABLE `attendance_msc_sem9`
-  MODIFY `att_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `att_id` int NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `faculty`
 --
 ALTER TABLE `faculty`
-  MODIFY `ufac_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `ufac_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+
 --
 -- AUTO_INCREMENT for table `subject`
 --
 ALTER TABLE `subject`
-  MODIFY `usub_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170;
+  MODIFY `usub_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170;
+
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `attendance_mba_sem1`
---
-ALTER TABLE `attendance_mba_sem1`
-  ADD CONSTRAINT `attendance_mba_sem1_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem1_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem1_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `attendance_mba_sem2`
@@ -1830,169 +1846,7 @@ ALTER TABLE `attendance_mba_sem2`
   ADD CONSTRAINT `attendance_mba_sem2_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `attendance_mba_sem2_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `attendance_mba_sem2_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_mba_sem3`
---
-ALTER TABLE `attendance_mba_sem3`
-  ADD CONSTRAINT `attendance_mba_sem3_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem3_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem3_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_mba_sem4`
---
-ALTER TABLE `attendance_mba_sem4`
-  ADD CONSTRAINT `attendance_mba_sem4_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem4_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem4_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_mba_sem5`
---
-ALTER TABLE `attendance_mba_sem5`
-  ADD CONSTRAINT `attendance_mba_sem5_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem5_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem5_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_mba_sem6`
---
-ALTER TABLE `attendance_mba_sem6`
-  ADD CONSTRAINT `attendance_mba_sem6_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem6_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem6_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_mba_sem7`
---
-ALTER TABLE `attendance_mba_sem7`
-  ADD CONSTRAINT `attendance_mba_sem7_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem7_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem7_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_mba_sem8`
---
-ALTER TABLE `attendance_mba_sem8`
-  ADD CONSTRAINT `attendance_mba_sem8_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem8_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem8_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_mba_sem9`
---
-ALTER TABLE `attendance_mba_sem9`
-  ADD CONSTRAINT `attendance_mba_sem9_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem9_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem9_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_mba_sem10`
---
-ALTER TABLE `attendance_mba_sem10`
-  ADD CONSTRAINT `attendance_mba_sem10_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem10_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_mba_sem10_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_msc_sem1`
---
-ALTER TABLE `attendance_msc_sem1`
-  ADD CONSTRAINT `attendance_msc_sem1_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem1_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem1_ibfk_4` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_msc_sem2`
---
-ALTER TABLE `attendance_msc_sem2`
-  ADD CONSTRAINT `attendance_msc_sem2_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem2_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem2_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_msc_sem3`
---
-ALTER TABLE `attendance_msc_sem3`
-  ADD CONSTRAINT `attendance_msc_sem3_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem3_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem3_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_msc_sem4`
---
-ALTER TABLE `attendance_msc_sem4`
-  ADD CONSTRAINT `attendance_msc_sem4_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem4_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem4_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_msc_sem5`
---
-ALTER TABLE `attendance_msc_sem5`
-  ADD CONSTRAINT `attendance_msc_sem5_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem5_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem5_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_msc_sem6`
---
-ALTER TABLE `attendance_msc_sem6`
-  ADD CONSTRAINT `attendance_msc_sem6_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem6_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem6_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_msc_sem7`
---
-ALTER TABLE `attendance_msc_sem7`
-  ADD CONSTRAINT `attendance_msc_sem7_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem7_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem7_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_msc_sem8`
---
-ALTER TABLE `attendance_msc_sem8`
-  ADD CONSTRAINT `attendance_msc_sem8_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem8_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem8_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `attendance_msc_sem9`
---
-ALTER TABLE `attendance_msc_sem9`
-  ADD CONSTRAINT `attendance_msc_sem9_ibfk_1` FOREIGN KEY (`date`) REFERENCES `days` (`date`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem9_ibfk_2` FOREIGN KEY (`s_enrl`) REFERENCES `student` (`s_enrl`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `attendance_msc_sem9_ibfk_3` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `days`
---
-ALTER TABLE `days`
-  ADD CONSTRAINT `days_ibfk_1` FOREIGN KEY (`ac_year_id`) REFERENCES `academic_year` (`ac_year_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `faculty`
---
-ALTER TABLE `faculty`
-  ADD CONSTRAINT `faculty_ibfk_1` FOREIGN KEY (`c_id`) REFERENCES `course` (`c_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `student`
---
-ALTER TABLE `student`
-  ADD CONSTRAINT `student_ibfk_1` FOREIGN KEY (`c_id`) REFERENCES `course` (`c_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `student_ibfk_2` FOREIGN KEY (`usub_id`) REFERENCES `subject` (`usub_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `subject`
---
-ALTER TABLE `subject`
-  ADD CONSTRAINT `subject_ibfk_1` FOREIGN KEY (`ufac_id`) REFERENCES `faculty` (`ufac_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `subject_ibfk_2` FOREIGN KEY (`sem_no`) REFERENCES `sem_year` (`sem_no`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `subject_ibfk_3` FOREIGN KEY (`c_id`) REFERENCES `course` (`c_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
